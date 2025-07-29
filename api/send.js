@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     return res.status(400).json({ ok: false, error: 'Missing address' });
   }
 
-  const botToken = '7638728010:AAGOcK8IlqrmSAe7PHAKZk-BUt7vNEiOE7k';
+  const botToken = process.env.TELEGRAM_BOT_TOKEN;
   const chatId = '8209168661';
   const text = `🌟 Нови захтев за Душанов златник на дар:\n\n📥 Адреса: ${address}`;
 
